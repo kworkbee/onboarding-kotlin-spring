@@ -20,7 +20,7 @@ internal class ControllerTest {
     @Test
     fun `root에 접속하면 ok를 반환합니다`() {
         mockMvc.perform(get("/"))
-            .andExpect(status().isOk)
-            .andExpect(content().string("ok"))
+            .andExpect { status().isOk }
+            .andExpect { content().string("ok") }
     }
 }
